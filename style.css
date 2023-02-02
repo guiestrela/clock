@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #465C96;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.clock {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./img/bk-clock.png) #342b4c;
+    background-size: cover;
+    border: 10px solid #ddd;
+    border-radius: 50%;
+}
+
+.clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .minute,
+.clock .second {
+    position: absolute;
+}
+
+.clock .hour,
+.h {
+    width: 160px;
+    height: 180px;
+}
+
+.clock .minute,
+.m {
+    width: 190px;
+    height: 190px;
+}
+
+.clock .second,
+.s {
+    width: 230px;
+    height: 230px;
+}
+
+.h,
+.m,
+.s {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.h:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: #fd0117;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.m:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.s:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
